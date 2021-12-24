@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+main {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  height: 35rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  display: flex;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  margin: 3rem auto;
+  border-radius: 15px;
+}
+.player--active {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+.player {
+  flex: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.newGame {
+  height: 50px;
+  width: 8rem;
+  margin-top: 5rem;
+  border: black;
+  border-radius: 30px;
+  transform: translateX(-50%);
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.hold-score {
+  margin-top: 2rem;
+  margin-bottom: 12rem;
+  color: rgba(201, 25, 25, 0.9);
+  font-size: 3rem;
+}
+.colored-div {
+  display: block-flex;
+  /* padding: 1rem 3rem; */
+  padding: 1rem 1rem;
+  background-color: rgba(201, 25, 107, 0.719);
+  border-radius: 10px;
+  text-align: center;
+  opacity: 1;
+  color: white;
+}
+.current-para {
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+}
+
+.btn--roll {
+  margin-top: 21rem;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 8rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(201, 25, 25, 0.9);
+  cursor: pointer;
+}
+
+.btn--hold {
+  margin-top: 25rem;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 7rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgba(201, 25, 25, 0.9);
+}
+@media (min-width: 700px) {
+  .newGame {
+    width: 10rem;
+  }
+  .btn--hold {
+    width: 10rem;
+  }
+  .btn--roll {
+    width: 10rem;
+  }
+}
+@media (min-width: 998px) {
+  main {
+    width: 70%;
+  }
+}
+@media (min-width: 1300px) {
+  main {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  .colored-div {
+    padding: 1rem 3rem; /* padding: 1rem 3rem; */
+  }
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  margin-top: 13rem;
+  transform: translateX(-50%);
+  width: 4rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
